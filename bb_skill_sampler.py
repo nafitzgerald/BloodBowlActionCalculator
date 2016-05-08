@@ -33,7 +33,7 @@ def do_sequence(sequence, skills, has_trr, can_use_trr_next = True):
 
     #Do a die roll for hte currect action. If sucessful, we can continue with the sequence.
     roll_required = max(2, curr_action.roll_required)
-    roll_required = min(6, curr_action.roll_required)
+    roll_required = min(6, roll_required)
     chance_of_success = float(6 - roll_required + 1) / 6
 
     chance_after_success = do_sequence(sequence, skills, has_trr)
